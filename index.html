@@ -65,6 +65,38 @@
               <use href="./image/icon.svg#icon-close"></use>
             </svg>
           </button>
+          <form class="form" action="">
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="form-field">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+            </div>
+            <div class="form-field">
+              <label for="email">Почта</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="form-field">
+              <label for="coments">Коментарий</label>
+              <textarea
+                name="coments"
+                id="coments"
+                cols="30"
+                rows="10"
+                placeholder="Введите текст"
+              >
+              </textarea>
+            </div>
+            <label for="checkbox" class="form-checkbox-label"
+              ><input type="checkbox" name="checkbox" id="checkbox" />Соглашаюсь
+              с рассылкой и принимаю
+              <a href="">Условия договора</a>
+            </label>
+            <button type="submit">Отправить</button>
+          </form>
         </div>
       </div>
       <section class="order">
