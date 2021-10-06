@@ -7,6 +7,7 @@
   --bachgroun-button-portfolio: #f5f4fa;
   --section-services-gap: 30px;
   --icon-background: #afb1b8;
+  --primary-black-color: #000000;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -68,7 +69,7 @@ ul {
   line-height: 1.19;
 }
 .logo-black {
-  color: #000000;
+  color: var(--primary-black-color);
 }
 .logo-white {
   color: var(--primary-white-color);
@@ -169,117 +170,6 @@ ul {
   color: var(--accent-color);
 }
 
-/* Бекдроп */
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: rgba(0, 0, 0, 0.2);
-}
-/* Модальне Вікно */
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--primary-white-color);
-  cursor: pointer;
-  padding: 0;
-}
-
-.modal {
-  min-width: 528px;
-  min-height: 581px;
-  background-color: var(--primary-white-color);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-title {
-  display: block;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  margin: 0 auto;
-}
-.form {
-  padding: 40px;
-}
-.form p {
-  margin-bottom: 12px;
-}
-.form-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-.form-field label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-}
-.form-field input {
-  height: 40px;
-  margin: 0;
-  margin-top: 4px;
-  padding: 0;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-.form-field textarea::placeholder {
-  padding: 12px 16px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-field textarea {
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  resize: none;
-}
-
-.form-checkbox-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-}
-/* Отправить */
-.Form-btn-submit {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 4px;
-}
 /* Заказ услуг */
 .order {
   max-width: 1600px;
@@ -654,4 +544,137 @@ ul {
   letter-spacing: 0.03em;
   margin-top: 4px;
   color: var(--primary-text-color);
+}
+
+/*----------- Бекдроп */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* Модальне Вікно */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal {
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+.form {
+  padding: 40px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-label {
+  font-size: 12px;
+  padding-bottom: 4px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form-input {
+  height: 40px;
+  padding-left: 42px;
+  margin: 0;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-icon {
+  position: absolute;
+  top: 31px;
+  left: 12px;
+  pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--primary-black-color);
+}
+.form-field:focus .form-icon,
+.form-field:hover .form-icon {
+  color: var(--accent-color);
+  fill: currentColor;
+}
+.form-input:hover,
+.form-textarea:hover,
+.form-input:focus,
+.form-textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-textarea {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  resize: none;
+}
+/* не приймається */
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+/* Отправить */
+.Form-btn-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
 }
