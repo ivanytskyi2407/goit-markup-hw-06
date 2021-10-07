@@ -216,6 +216,7 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em; 
   margin-top: 30px;
 }
 
@@ -668,8 +669,8 @@ ul {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.form-checkbox-label {
+/* Соглашение */
+.form-checkbox-label {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -678,20 +679,47 @@ ul {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+.icon-checkbox{
+  position: relative;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid var(--primary-black-color);
+  border-radius: 2px;
+  background-size: contain;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-checkbox-label:focus .icon-checkbox,
+.form-checkbox-label:hover .icon-checkbox{
+  border: 2px solid var(--accent-color);
+}
+.checkbox{
+appearance: none;
+position: absolute;
+}
+.checkbox-link{
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.checkbox:checked + .icon-checkbox{
+  display: inline-block;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../image/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center ;
+}
 /* Отправить */
 .Form-btn-submit {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 4px;
+    
+  
 }
+
