@@ -439,6 +439,7 @@ ul {
   display: flex;
   }
 .subscription-icon{
+  margin-left: 10px;
 }
 .subscription-input{
 width: 358px;
@@ -471,9 +472,7 @@ line-height: 1.88;
 text-align: center;
 letter-spacing: 0.06em;  
 }
-.subscription-btn-text{
-  margin-right: 10px;
-}
+
 /* Portfolio */
 /* -------Список кнопок------- */
 
@@ -644,7 +643,7 @@ letter-spacing: 0.06em;
 
 .form-label {
   font-size: 12px;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
